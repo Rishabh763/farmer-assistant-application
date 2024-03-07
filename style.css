@@ -34,7 +34,7 @@ body {
     line-height: 1.5;
     font-family: Inter;
     background-color: var(--clr-primary-100);
-    /* overflow: clip; */
+    
 }
 
 /* A elements that don't have a class get default styles */
@@ -77,7 +77,7 @@ select {
 
 
     :root {
-        --clr-primary-700: #1e352fff;
+        --clr-primary-700: rgb(33, 81, 6);
         --clr-primary-400: #3e8914ff;
         --clr-primary-100: #c4d6b0ff;
 
@@ -122,9 +122,9 @@ main {
     width: 100%;
     margin-inline: auto;
     background-color: var(--clr-neutral-100);
+    overflow-x: clip;
     /* padding-inline: var(--padding); */
 
-    position: relative;
 
 }
 
@@ -133,8 +133,7 @@ nav {
 
     width: 100%;
     height: var(--nav-height);
-    position: sticky;
-    position: -webkit-sticky;
+    position: fixed;
     top: 0;
     z-index: 100;
 
@@ -188,7 +187,7 @@ ul>li>a {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--clr-neutral-400);
+    color: var(--clr-primary-400);
     transition: all ease-in-out 0.2s;
 }
 
@@ -236,7 +235,7 @@ ul>li>a:hover {
 
     .nav-links {
         position: fixed;
-        top: -5%;
+        top: 0%;
         right: 0;
         z-index: 99;
 
@@ -290,14 +289,12 @@ ul>li>a:hover {
 .wrapper{
     position: relative;
     width: 100%;
-    height: calc(100vh - var(--nav-height));
+    height: 100vh;
 }
 
 .hero{
     position: absolute;
-    top: calc(-1*var(--nav-height) - 1.4rem);
-    width: 100%;
-    height: calc(100% + var(--nav-height)*1.7);
+    inset: 0;
 
     background-image: url(./images/green-tea-bud-leaves-green-tea-plantations-morning.jpg);
     background-repeat: no-repeat;
@@ -593,6 +590,25 @@ ul>li>a:hover {
   
 
   @media screen and (max-width: 768px) {
+
+    nav{
+        padding-inline: 1rem;
+    }
+    .features{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2rem;
+
+    }
+
+    .features>.left,
+    .features>.right{
+        width: 100%;
+    }
+
+    .sample-slider{
+        width:100%;
+    }
 
   }
 
