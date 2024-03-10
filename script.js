@@ -90,7 +90,7 @@ gsap.to(".hero>h1", {
   swiper.on("slideChange", function () {
     var slideIndex = swiper.realIndex ;
     // console.log(slideIndex);
-    var paragraphs = document.querySelectorAll(".features .left p");
+    var paragraphs = document.querySelectorAll(".features>.left>.paragraph");
     paragraphs.forEach(function (paragraph, index) {
       console.log(index);
       if (index === slideIndex) {
