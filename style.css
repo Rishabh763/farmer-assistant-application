@@ -661,7 +661,13 @@ ul>li>a:hover {
     text-decoration: none;
     display: grid;
     place-content: center;
+    outline: 2px solid var(--clr-neutral-900);
     
+    transition: outline-offset 0.3s ease-in-out;
+}
+
+.back-btn:hover{
+    outline-offset: -5px;
 }
 
 .back-btn>i{
