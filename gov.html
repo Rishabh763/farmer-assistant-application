@@ -16,7 +16,7 @@
 
     form{
         max-width: 1440px;
-        margin:8rem auto 1rem auto;
+        margin:5rem auto 1rem auto;
         border-radius: 1rem;
         padding: 2rem;
         background-color: var(--clr-primary-400);
@@ -38,13 +38,23 @@
         padding: 0.2rem 1rem;
     }
 
+    label{
+        font-size: 1.2rem;
+    }
+
+    input,select{
+        border-radius: 0.25rem;
+        border: none;
+        padding: 0.2rem 0.5rem;
+        background-color: var(--clr-primary-100);
+    }
+
     @media screen and (max-width: 600px){
             body{
                 padding-inline: 1rem;
             }
 
             form{
-                margin-top: 6rem;
                grid-template-columns: 1fr;
             }
 
