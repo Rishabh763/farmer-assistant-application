@@ -29,7 +29,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     font-family: Inter;
@@ -374,7 +374,7 @@ ul>li>a:hover {
 
 .features>.left,
 .features>.right{
-    width: 50%;
+    width: 50%; 
 }
 
 .features>.left>.paragraph{
@@ -630,3 +630,41 @@ ul>li>a:hover {
     }
   }
 
+  .effect1 {
+            
+    border-radius: 100vw;
+    background: transparent;
+    font-size: clamp(1.5rem,2vw,2rem);
+    padding: 0rem 1rem;
+    color: var(--clr-neutral-100);
+    border: 2px solid var(--clr-neutral-100);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.effect1:hover {
+    border-color: var(--clr-neutral-700);
+    background: var(--clr-primary-100);
+    color: var(--clr-neutral-700);
+}
+
+.back-btn{
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 999;
+    background-color: var(--clr-neutral-100);
+    aspect-ratio: 1;
+    width: 4rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    display: grid;
+    place-content: center;
+    
+}
+
+.back-btn>i{
+    scale: 3;
+    color: black;
+}
